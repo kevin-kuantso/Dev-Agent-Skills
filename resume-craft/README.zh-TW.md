@@ -46,7 +46,7 @@ cp -r resume-craft /path/to/your/project/.cursor/rules/resume-craft
 /resume-craft /path/to/resume.pdf /path/to/jd.pdf
 ```
 
-讀取履歷，詢問 3-5 個關鍵問題，然後產出優化版本。若提供 JD，會進行 gap analysis 和 ATS keyword matching。
+讀取履歷，根據內容中模糊或缺漏的部分引導式提問，然後產出優化版本。若提供 JD，會進行 gap analysis 和 ATS keyword matching。
 
 ### Mode 2：Deep Analysis（`--analysis`）
 
@@ -88,7 +88,7 @@ Input detection → 蒐集關鍵資訊 → 以 XYZ formula 改寫
 ### 每個 phase 做了什麼？
 
 1. **Input Detection** — 自動偵測履歷、JD、target company 和語言
-2. **Information Collection** — 詢問 3-5 個聚焦問題（generate mode 則進行完整訪談）
+2. **Information Collection** — 根據履歷內容引導式提問（generate mode 則進行完整訪談）
 3. **Resume Generation** — 套用 Google XYZ formula、anti-inflation rules、ATS 優化及 target company profile
 4. **Iteration** — 先修改英文版，自動同步至其他語言版本
 5. **Interview Prep**（選用）— 生成逐條 Q&A 及 behavioral questions

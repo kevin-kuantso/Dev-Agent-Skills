@@ -236,11 +236,19 @@ Questions grouped by batch:
 
 ### Phase 2 — Information Collection & Confirmation
 
-**If Phase 1 was skipped (default):** Read the resume, identify the 3-5 most critical questions (role clarity, missing metrics, ambiguous scope), ask them in one focused batch, and proceed to Phase 3 once answered. Don't over-interview — get enough to produce a solid first draft; details can be refined in Phase 4.
+**If Phase 1 was skipped (default):** Read the resume and guide the user through clarifying questions. The number of questions depends entirely on the resume — a straightforward resume might need only a couple of clarifications, while a complex career history spanning multiple domains could require many more. Let the content drive the conversation, not an arbitrary count.
+
+Focus on areas where the resume is ambiguous or under-specified:
+- Role clarity: "Were you leading this team, or contributing as a member?"
+- Missing metrics: "Do you have a number for the performance improvement?"
+- Ambiguous scope: "Was this your project or a team effort?"
+- Technology gaps: "Which specific tools did you use for this?"
+
+Ask questions naturally as they arise from reading the resume. Group related questions together so the conversation flows logically (e.g., ask all questions about one role before moving to the next). When you have enough information to produce a solid first draft, proceed to Phase 3 — remaining details can always be refined during Phase 4 iteration.
 
 **If Phase 1 was run (`--analysis`):**
 1. Collect answers to the clarifying questions from Phase 1
-2. If new questions arise from the answers, ask in focused batches (not all at once)
+2. If new questions arise from the answers, ask follow-ups naturally — group related questions together so the conversation flows, but don't dump everything at once
 3. Update the analysis report file with the new information
 4. When all critical information is collected, confirm with the user: "I have everything I need. Ready to generate/optimize your resume?"
 5. **WAIT for user confirmation before proceeding to Phase 3**
@@ -312,9 +320,9 @@ Copy and track progress:
 
 ### Optimize Mode (Default — no `--analysis`)
 ```
-Phase 2 — Quick Collect:
+Phase 2 — Guided Collection:
 - [ ] Read and assess resume
-- [ ] Ask 3-5 critical questions in one batch
+- [ ] Ask clarifying questions guided by resume content (no fixed count)
 - [ ] Detect target company profile
 
 Phase 3 — Execute:
@@ -365,7 +373,7 @@ Phase 4 — Iterate:
 Phase 1 — Analysis:
 - [ ] JD analysis (if provided)
 - [ ] Detect target company profile
-- [ ] Write information-needed questions (batched)
+- [ ] Write information-needed questions (guided by content)
 - [ ] Save analysis_report_<name>_<date>.md
 - [ ] Present report path + questions to user
 - [ ] WAIT for answers

@@ -46,7 +46,7 @@ cp -r resume-craft /path/to/your/project/.cursor/rules/resume-craft
 /resume-craft /path/to/resume.pdf /path/to/jd.pdf
 ```
 
-Reads the resume, asks 3-5 critical questions, then produces an optimized version. If a JD is provided, performs gap analysis and ATS keyword matching.
+Reads the resume, guides you through clarifying questions based on what's ambiguous or missing, then produces an optimized version. If a JD is provided, performs gap analysis and ATS keyword matching.
 
 ### Mode 2: Deep Analysis (`--analysis`)
 
@@ -88,7 +88,7 @@ Input detection → Collect critical info → Rewrite with XYZ formula
 ### What does each phase do?
 
 1. **Input Detection** — Auto-detect resume, JD, target company, and language
-2. **Information Collection** — Ask 3-5 focused questions (or full interview in Generate mode)
+2. **Information Collection** — Guide you through clarifying questions driven by resume content (or full interview in Generate mode)
 3. **Resume Generation** — Apply Google XYZ formula, Anti-Inflation Rules, ATS optimization, and target company profile
 4. **Iteration** — Apply changes to EN first, auto-sync to other language versions
 5. **Interview Prep** (optional) — Generate bullet-by-bullet Q&A and behavioral questions
