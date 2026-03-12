@@ -65,6 +65,35 @@ claude
 
 [📖 完整文件](resume-craft/SKILL.md)
 
+### 🔀 Smart Commit
+
+分析 code changes 並按 feature 拆分為乾淨、有邏輯的 commits，然後生成 PR description。
+
+**快速開始：**
+```bash
+# 1. 將 skill 複製到使用者 skills 資料夾
+cp -r smart-commit ~/.claude/skills/smart-commit
+
+# 2. 開啟 Claude Code
+claude
+
+# 3. 呼叫 skill
+/smart-commit
+```
+
+**功能特色：**
+
+| 功能 | 說明 |
+|------|------|
+| **Feature-based splitting** | 按邏輯 feature 分組，而非按檔案 |
+| **Partial file splits** | 當同一檔案涉及多個 feature 時，安全地拆分到不同 commits |
+| **Unused file detection** | 辨識未被 import/使用的檔案，從 commits 中排除 |
+| **Conventional Commits** | `feat`、`fix`、`refactor`、`docs`、`test`、`chore` 等 |
+| **Diff integrity check** | 驗證拆分後的 total diff 與原始完全一致 |
+| **PR description generation** | 產出 summary、change list、file structure 和 test plan |
+
+[📖 完整文件](smart-commit/SKILL.md)
+
 ---
 
 ## 🚀 快速開始
@@ -99,6 +128,8 @@ Dev-Agent-Skills/
 │       ├── collection-template.md # 每個職位的結構化訪談 template
 │       ├── company-profiles.md    # Target company profiles
 │       └── locale-rules.md        # 多語系術語規則
+├── smart-commit/                  # Commit splitting & PR description skill
+│   └── SKILL.md                   # 核心指令（agent entry point）
 └── README.md                      # 本文件
 ```
 

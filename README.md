@@ -65,6 +65,35 @@ claude
 
 [📖 Full Documentation](resume-craft/SKILL.md)
 
+### 🔀 Smart Commit
+
+Analyze code changes and split them into clean, logical commits by feature, then generate a PR description.
+
+**Quick Start:**
+```bash
+# 1. Copy the skill to the user skills folder
+cp -r smart-commit ~/.claude/skills/smart-commit
+
+# 2. Open Claude Code
+claude
+
+# 3. Invoke the skill
+/smart-commit
+```
+
+**Features:**
+
+| Feature | Description |
+|---------|-------------|
+| **Feature-based splitting** | Groups changes by logical feature, not by file |
+| **Partial file splits** | Safely splits a single file across multiple commits when it touches multiple features |
+| **Unused file detection** | Identifies files not imported/used anywhere and excludes them from commits |
+| **Conventional Commits** | `feat`, `fix`, `refactor`, `docs`, `test`, `chore`, etc. |
+| **Diff integrity check** | Verifies the total diff after splitting matches the original exactly |
+| **PR description generation** | Produces a summary, change list, file structure, and test plan |
+
+[📖 Full Documentation](smart-commit/SKILL.md)
+
 ---
 
 ## 🚀 Getting Started
@@ -99,6 +128,8 @@ Dev-Agent-Skills/
 │       ├── collection-template.md # Structured interview template per role
 │       ├── company-profiles.md    # Target company tone profiles
 │       └── locale-rules.md        # Multi-language terminology rules
+├── smart-commit/                  # Commit splitting & PR description skill
+│   └── SKILL.md                   # Core instructions (agent entry point)
 └── README.md                      # This file
 ```
 
